@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aktualna data</title>
+  </head>
+  <body>
+    <h1>Aktualna data:</h1>
+    <p id="data"></p>
+    
+    <script>
+      const dzienTygodnia = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
+      const miesiace = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
+      const teraz = new Date();
+      const dzien = dzienTygodnia[teraz.getDay()];
+      const dzienMiesiaca = teraz.getDate();
+      const miesiac = miesiace[teraz.getMonth()];
+      const rok = teraz.getFullYear();
+      const godzina = teraz.getHours();
+      const minuty = teraz.getMinutes();
+      const sekundy = teraz.getSeconds();
+      
+      const data = `${dzien}, ${dzienMiesiaca} ${miesiac} ${rok}, ${godzina}:${minuty}:${sekundy}`;
+      document.getElementById("data").innerHTML = data;
+    </script>
+  </body>
+</html>
